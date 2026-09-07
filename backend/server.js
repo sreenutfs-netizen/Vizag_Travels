@@ -47,6 +47,24 @@ const readCabs = () => {
 
 // Routes
 
+// Home Page
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>🚖 Vizag Travels Backend</h1>
+    <h2>Backend is running successfully!</h2>
+
+    <h3>Available APIs</h3>
+
+    <ul>
+      <li><a href="/api/health">GET /api/health</a></li>
+      <li><a href="/api/cabs">GET /api/cabs</a></li>
+      <li>POST /api/bookings</li>
+      <li><a href="/api/admin/bookings">GET /api/admin/bookings</a></li>
+    </ul>
+  `);
+});
+
+
 // Get all cabs
 app.get('/api/cabs', (req, res) => {
   try {

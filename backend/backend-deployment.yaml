@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vizag-backend
+  namespace: vizag
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+
+    spec:
+      imagePullSecrets:
+      - name: dockerhub-secret
+
+      containers:
+      - name: backend
+        image: sreenu8143/sreenu:vizag-backend-v1
+
+        ports:
+        - containerPort: 5000
