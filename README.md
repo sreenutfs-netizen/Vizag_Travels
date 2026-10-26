@@ -1,4 +1,4 @@
-# 🚌 Vizag Tours & Travels - Booking Application
+# 🚌  Tours & Travels - Booking Application
 
 A complete full-stack web application for booking cabs and tours in Visakhapatnam (Vizag) with an admin dashboard to manage bookings.
 
